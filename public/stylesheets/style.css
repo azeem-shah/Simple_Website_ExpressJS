@@ -1,0 +1,95 @@
+body {
+    padding-top: 50px;
+
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00b7ff;
+}
+#navbrand {
+    color: #43abf0;
+}
+/*#footerindex {
+    position: relative;
+    top: -75px;
+}
+#jumbotron1 {
+    position: relative;
+    top: -15px;
+}
+#jumbotron2 {
+    position: relative;
+    top: -40px;
+}*/
+
+#paneljava,
+#panelruby,
+#panelnode {
+    background-color: #f8e8e4;
+}
+
+#services {
+    background-color: #f8e8e4;
+}
+
+#firstimage {
+    -webkit-filter: grayscale(100%);
+}
+#firstimage:hover {
+    -webkit-transform: scale(1.05);
+
+    -webkit-filter: grayscale(0%);
+}
+
+#secondimage {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+#secondimage:hover {
+    -webkit-transform: scale(1.05);
+
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+}
+
+#thirdimage {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+#thirdimage:hover {
+    -webkit-transform: scale(1.05);
+
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+}
+#fourthimage {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+#fourthimage:hover {
+    -webkit-transform: scale(1.05);
+
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+}
+#fifthimage {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+#fifthimage:hover {
+    -webkit-transform: scale(1.05);
+
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+}
+#sixthimage {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
+#sixthimage:hover {
+    -webkit-transform: scale(1.05);
+
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+}

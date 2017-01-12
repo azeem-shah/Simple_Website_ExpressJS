@@ -1,0 +1,154 @@
+extends layout
+
+block content
+  head
+    title
+    // Latest compiled and minified CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    // Optional theme
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+    // Latest compiled and minified JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-3.1.1.js', integrity='sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=', crossorigin='anonymous')
+
+
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          a.navbar-brand#navbrand(href='/') WebSiteIcon
+        ul.nav.navbar-nav
+          li
+            a(href='/') Home
+          li
+            a(href='technology') Technology
+          li.active
+            a(href='/client') Client
+          li
+            a(href='/contact') Contact
+   .div#services
+     .row
+      .col-xs-12.col-md-4
+       h3
+        h2 Software Development
+        p(style='text-align:justify')
+          | Software development is the process of computer programming, documenting, testing, and bug fixing involved in creating and maintaining applications and frameworks resulting in a software product. Software development is a process of writing and maintaining the source code, but in a broader sense it includes all that is involved between the conception of the desired software through to the final manifestation of the software, sometimes in a planned and structured process.[1] Therefore, software development may include research, new development, prototyping, modification, reuse, re-engineering, maintenance, or any other activities that result in software products.
+      .col-xs-12.col-md-4
+       h3
+        h2 Website Development
+        p(style='text-align:justify')
+          | Web development is a broad term for the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing the simplest static single page of plain text to the most complex web-based internet applications, electronic businesses, and social network services. A more comprehensive list of tasks to which web development commonly refers, may include web engineering, web design, web content development, client liaison, client-side/server-side scripting, web server and network security configuration, and e-commerce development.
+      .col-xs-12.col-md-4
+       h3
+        h2 Web Maintainence
+        p(style='text-align:justify')
+          | International development or global development is a wide concept concerning the level of development on an international scale. It is the basis for international classifications such as developed country, developing country and least developed country. There are, however, many schools of thought and conventions regarding which are the exact features constituting development of a country. Historically it has been largely synonymous with economic development. Recently it is also often used in a holistic and multi-disciplinary context of human development as well as other concepts like competitiveness, quality of life or subjective well-being.
+   
+   #clients.well
+    h3(style='text-align:center') Meet our Clients !<hr />
+
+
+      .row
+        .col-md-4
+          .thumbnail
+            #fourthimage(style='height:100px')
+              img(src='images/FieldLens.png', alt='nothing', style=' display: block;margin-left: auto;margin-right: auto')
+        .col-md-4
+          .thumbnail(style='height:100px')
+            #fifthimage
+              img(src='images/CentralDesktop.png', alt='nothing', style=' display: block;margin-left: auto;margin-right: auto')
+        .col-md-4
+          .thumbnail(style='height:100px')
+            #sixthimage
+              img(src='images/logo298x88.png', alt='nothing', style=' display: block;margin-left: auto;margin-right: auto')
+      .row
+        .col-md-4
+          .thumbnail(style='height:100px')
+            #firstimage
+              img(src='images/CentralDesktop.png', alt='nothing', style=' display: block;margin-left: auto;margin-right: auto')
+        .col-md-4
+          .thumbnail(style='height:100px')
+            #secondimage
+              img(src='images/Expensify.png', alt='nothing', style=' display: block;margin-left: auto;margin-right: auto;margin-top: 20px')
+        .col-md-4
+          .thumbnail(style='height:100px')
+            #thirdimage
+              img(src='images/ExactTarget.png', alt='nothing', style=' display: block;margin-left: auto;margin-right: auto;margin-top: 20px')
+ 
+   .row
+    .col-lg-12.text-center
+      h2(style='font-family: verdana') Prices for our Services
+      .container-fluid
+        .container
+          p.text-center
+            table.table.table-bordered.table-hover
+              thead
+                tr
+                  td(colspan='4') Prices List
+              tbody
+                tr
+                // You can adjust the width of table columns as well
+                th.col-md-2
+                  // Use text alignment like text-center or text-right
+                th.text-center
+                  | Basic Plan
+                th.text-center
+                  | Medium Plan
+                th.text-center
+                  | Expert Plan
+                tr
+                  td Emails
+                  td.text-center 1
+                  td.text-center 5
+                  td.text-center 10
+                tr
+                  td Space
+                  td.text-center 100 MB
+                  td.text-center 500 MB
+                  td.text-center 1 GB
+                tr
+                  td Validity
+                  td.text-center 1 Year
+                  td.text-center 5 Years
+                  td.text-center 10 years
+   footer
+      .navbar.navbar-inverse(style='height:300px;')
+        .container
+          .row
+            #footerlocation.footer-col.col-md-4.col-xs-4
+              h3(style='font-family: verdana;color:#fff') Location
+              p(style='color:#fff')
+                | Gomti Nagar
+                br
+                | Lucknow, 226010
+            .footer-col.col-md-4.col-xs-4
+              h3#footerlocation(style='font-family: verdana;color:#fff') Connect to us
+              a#googleicon.socialIcons(href='http://plus.google.com/', title='Google+', alt='Google+')
+                img(src='http://www.windstarwd.com/testman/assets/ico/social/32x32/googleplus-32.png')
+              &nbsp;&nbsp; 
+              a#twittericon.socialIcons(href='http://twitter.com/', title='Twitter', alt='Twitter')
+                img(src='http://www.windstarwd.com/testman/assets/ico/social/32x32/twitter-32.png')
+              &nbsp;&nbsp; 
+              a#facebookicon.socialIcons(href='http://facebook.com/', title='Facebook', alt='Facebook')
+                img(src='http://www.windstarwd.com/testman/assets/ico/social/32x32/facebook-32.png')
+            #footerabout.footer-col.col-md-4.col-xs-4
+              h3(style='font-family: verdana;color:#fff') About Freelancer
+              p(style='text-align:justify;color:#fff')
+                | Freelance is a free to use, open source Bootstrap theme created by 
+                a(href='http://startbootstrap.com') Start Bootstrap
+                | .
+              button.btn.btn-default(type='submit')
+                span.glyphicon.glyphicon-envelope
+              &nbsp;&nbsp; 
+              button.btn.btn-default(type='submit')
+                span.glyphicon.glyphicon-qrcode
+              &nbsp;&nbsp; 
+              button.btn.btn-default(type='submit')
+                span.glyphicon.glyphicon-thumbs-up
+              &nbsp;&nbsp; 
+              button.btn.btn-default(type='submit')
+                span.glyphicon.glyphicon-globe
+            .navbar-text.pull-right
+              p(style='color:#fff;position:relative;top:85px') Copyright © Reserved
+

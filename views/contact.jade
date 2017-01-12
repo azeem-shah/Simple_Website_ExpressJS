@@ -1,0 +1,149 @@
+extends layout
+
+block content
+  head
+    title
+    // Latest compiled and minified CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    // Optional theme
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+    // Latest compiled and minified JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-3.1.1.js', integrity='sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=', crossorigin='anonymous')
+
+
+
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          a.navbar-brand#navbrand(href='/') WebSiteIcon
+        ul.nav.navbar-nav
+          li
+            a(href='/') Home
+          li
+            a(href='/technology') Technology
+          li
+            a(href='/client') Client
+          li.active
+            a(href='/contact') Contact
+   .container-fluid
+    .row
+      .col-md-4
+         h2(style='font-family: verdana')
+           p(style='text-align:center') Contact Us
+         form.form-group(action='/contact', method='post')
+           .form-group
+            label.control-label(for='exampleInputEmail1') Email address
+            input#inputWarning1.form-control(type='email', name='email', placeholder='Email', required='required')
+           .form-group
+            label.control-label(for='exampleInputEmail1') Subject
+            input#subject.form-control(type='text', name='subject', placeholder='Subject', required='required')
+           .form-group
+            label.control-label(for='exampleInputmessage') Message
+            textarea.form-control(rows='3', name='message', placeholder='Enter Message', required='required')
+           .input
+            button.btn.btn-primary(type='submit') Send
+      .col-md-4
+          div
+            h2(style='font-family: verdana;text-align:center') Expericence
+            h3(style='text-align:center;font-family: verdana') 7 Years in IT Industry
+            li
+              p
+                | However training is useful for all newcomers; irrespective of whether you have a formal background in IT or not. IT training centers offer a wide variety of programs on weekdays, weekend or evening, part time or full time. 
+            h3(style='text-align:center;font-family: verdana') 5 Years in Software Development
+            li
+              p
+                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. 
+            h3(style='text-align:center;font-family: verdana') 4 Years in leading technologies
+            li
+              p
+                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+
+      .col-md-4
+          h2(style='font-family: verdana')
+            p(style='text-align:center') Location
+          <br />
+
+          .row
+            .col-md-6
+              .panel.panel-default
+                h3(style='font-family: verdana')
+                  p(style='text-align:center') California, US
+                h4
+                  p(style='text-align:center') 356 College Eight Road
+                h4
+                  p(style='text-align:center') Santa Cruz, CA 95064
+
+                
+              .panel.panel-default
+                h3(style='font-family: verdana')
+                  p(style='text-align:center') Delhi, India
+                h4
+                  p(style='text-align:center') 4/345 Sapan Vihar
+                h4
+                  p(style='text-align:center') Palika Bazar 112309
+            
+            .col-md-6
+              .panel.panel-default
+                h3(style='font-family: verdana')
+                  p(style='text-align:center') London, UK
+                h4
+                  p(style='text-align:center') 15-17 Charlotte Street,
+                h4
+                  p(style='text-align:center')  London, England
+              .panel.panel-default
+                h3(style='font-family: verdana')
+                  p(style='text-align:center') Lucknow, India
+                h4
+                  p(style='text-align:center') 3/XXX Vivek Khand,
+                h4
+                  p(style='text-align:center') Gomti Nagar, Lucknow
+    .jumbotron
+      .container-fluid
+        h2(style='font-family: verdana') Get in touch with us !
+        p.lead  
+        h4(style='font-family: verdana') Contact us and we'll get back to you.
+        h4(style='font-family: verdana') We look forward to working with you.
+
+   footer
+      .navbar.navbar-inverse(style='height:300px;')
+        .container
+          .row
+            #footerlocation.footer-col.col-md-4.col-xs-4
+              h3(style='font-family: verdana;color:#fff') Location
+              p(style='color:#fff')
+                | Gomti Nagar
+                br
+                | Lucknow, 226010
+            .footer-col.col-md-4.col-xs-4
+              h3#footerlocation(style='font-family: verdana;color:#fff') Connect to us
+              &nbsp;&nbsp; 
+              a#googleicon.socialIcons(href='http://plus.google.com/', title='Google+', alt='Google+')
+                img(src='http://www.windstarwd.com/testman/assets/ico/social/32x32/googleplus-32.png')
+              &nbsp;&nbsp; 
+              a#twittericon.socialIcons(href='http://twitter.com/', title='Twitter', alt='Twitter')
+                img(src='http://www.windstarwd.com/testman/assets/ico/social/32x32/twitter-32.png')
+              &nbsp;&nbsp;
+              a#facebookicon.socialIcons(href='http://facebook.com/', title='Facebook', alt='Facebook')
+                img(src='http://www.windstarwd.com/testman/assets/ico/social/32x32/facebook-32.png')
+            #footerabout.footer-col.col-md-4.col-xs-4
+              h3(style='font-family: verdana;color:#fff') About Freelancer
+              p(style='text-align:justify;color:#fff')
+                | Freelance is a free to use, open source Bootstrap theme created by 
+                a(href='http://startbootstrap.com') Start Bootstrap
+                | .
+              button.btn.btn-default(type='submit') 
+                span.glyphicon.glyphicon-envelope
+              &nbsp;&nbsp;       
+              button.btn.btn-default(type='submit')
+                span.glyphicon.glyphicon-qrcode
+              &nbsp;&nbsp; 
+              button.btn.btn-default(type='submit')
+                span.glyphicon.glyphicon-thumbs-up
+              &nbsp;&nbsp; 
+              button.btn.btn-default(type='submit')
+                span.glyphicon.glyphicon-globe
+            .navbar-text.pull-right
+              p(style='color:#fff;position:relative;top:85px') Copyright © Reserved
