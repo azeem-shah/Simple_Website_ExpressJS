@@ -9,6 +9,8 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var contact=require('./routes/contact');
+var admin=require('./routes/admin');
+var deletemessage=require('./routes/deletemessage')
 
 var app = express();
 
@@ -23,10 +25,17 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
 app.use('/', routes);
 app.use('/users', users);
 
 app.post('/contact', contact);
+
+app.get('/admin',admin);
+app.post('/admin',admin);
+
+app.get('/delete/:id',deletemessage);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

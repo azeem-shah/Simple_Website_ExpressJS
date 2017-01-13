@@ -1,0 +1,103 @@
+extends layout
+
+block content
+  head
+    title
+    // Latest compiled and minified CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    // Optional theme
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+    // Latest compiled and minified JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-3.1.1.js', integrity='sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=', crossorigin='anonymous')
+
+
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          a.navbar-brand#navbrand(href='/') WebSiteIcon
+        ul.nav.navbar-nav
+          li
+            a(href='/') Home
+          li
+            a(href='/technology') Technology
+          li
+            a(href='/client') Client
+          li
+            a(href='/contact') Contact
+          li.active
+            a(href='/admin') Admin
+
+    #jumbotron1.jumbotron
+      .container-fluid
+        h2 Welcome Admin.
+        h3 See the messages.
+        h4 Delete if you want to. 
+
+
+  .row
+    .col-md-2
+    .col-md-8
+      table.table
+        tr
+            th Name
+            th Subjects
+            th Message
+            th Delete
+        if items && items.length > 0
+            each item in items
+                tr
+                    td #{item.email}
+                    td #{item.subject}
+                    td #{item.message}
+                    td
+                        a(href='/delete/#{item._id}') Delete
+                        
+
+                    
+        else
+            tr
+                td(colspan=2) No records in database
+
+    .col-md-2
+  footer#footerindex
+      .navbar.navbar-inverse(style='height:300px;')
+        .container
+          .row
+            #footerlocation.footer-col.col-md-4.col-xs-4
+              h3(style='font-family: verdana;color:#fff') Location
+              p(style='color:#fff')
+                | Gomti Nagar
+                br
+                | Lucknow, 226010
+            .footer-col.col-md-4.col-xs-4
+              h3#footerlocation(style='font-family: verdana;color:#fff') Connect to us
+              a#googleicon.socialIcons(href='http://plus.google.com/', title='Google+', alt='Google+')
+                img(src='http://www.windstarwd.com/testman/assets/ico/social/32x32/googleplus-32.png')
+              &nbsp;&nbsp;
+              a#twittericon.socialIcons(href='http://twitter.com/', title='Twitter', alt='Twitter')
+                img(src='http://www.windstarwd.com/testman/assets/ico/social/32x32/twitter-32.png')
+              &nbsp;&nbsp;
+              a#facebookicon.socialIcons(href='http://facebook.com/', title='Facebook', alt='Facebook')
+                img(src='http://www.windstarwd.com/testman/assets/ico/social/32x32/facebook-32.png')
+            #footerabout.footer-col.col-md-4.col-xs-4
+              h3(style='font-family: verdana;color:#fff') About Freelancer
+              p(style='text-align:justify;color:#fff')
+                | Freelance is a free to use, open source Bootstrap theme created by
+                a(href='http://startbootstrap.com') Start Bootstrap
+                | .
+              button.btn.btn-default(type='submit')
+                span.glyphicon.glyphicon-envelope
+              &nbsp;&nbsp;
+              button.btn.btn-default(type='submit')
+                span.glyphicon.glyphicon-qrcode
+              &nbsp;&nbsp;
+              button.btn.btn-default(type='submit')
+                span.glyphicon.glyphicon-thumbs-up
+              &nbsp;&nbsp;
+              button.btn.btn-default(type='submit')
+                span.glyphicon.glyphicon-globe
+            .navbar-text.pull-right
+              p(style='color:#fff;position:relative;top:85px') Copyright © Reserved
